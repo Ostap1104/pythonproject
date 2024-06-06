@@ -14,6 +14,7 @@ body {
 body > div > nav > div > a > h4 {
  color: #000;
  font-family: 'Ubuntu', sans-serif;
+ 
 }
 .article-block {
  background: #fff;
@@ -39,3 +40,42 @@ body > div > div > ol > li {
 div.container-image > img {
     width: 100%;
    }
+
+.articles-row {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 4px 4px 1px #ccc;
+  margin: 10px;
+}
+.navbar > .container{
+justify-content: start;
+gap: 10px;
+
+}
+.link-category{
+  padding: 10px 15px;
+  background-color: #c4c4c4;
+  border-radius: 7px;
+  border: #000 1px solid;
+  /* box-shadow: 4px 4px 1px #ccc; */
+}
+.link-category > h4 {
+  margin-bottom: 0;
+}
+.link-category:hover{
+  filter: brightness(80%);
+  transition: filter 0.3s ease
+}
+.breadcrumb li + li:before{
+content: ' / ';
+padding: 0 5px;
+}

@@ -2,11 +2,19 @@
 {% load static %}
 {% block content %}
 {% spaceless %}
-
-<h1>Публікації</h1>
+<ol class="breadcrumb">
+            <li><a href="/">Головна</a></li>
+            <li><a href="{% url 'articles-list' %}">Публікації</a></li>
+            <li>{{ item.title|upper }}</li>
+</ol>
+{% if not category %} 
+     <h1>Всі публікації</h1>
 <br/>
+{% endif %}
+
+
 {% if category %} 
-    {{ category }} 
+   <h1> Категорія: {{ category }} </h1> 
 {% endif %}
 
 {% for item in items %}

@@ -30,9 +30,7 @@ class Article(models.Model):
     pub_date = models.DateTimeField(u'Дата публікації', default=timezone.now)
     slug = models.SlugField(u'Слаг', unique_for_date='pub_date')
     main_page = models.BooleanField(u'Головна', default=True,help_text=u'Показувати на головній сторінці')
-    category = models.ForeignKey(Category, 
-    related_name='article', blank=True,null=True, 
-    verbose_name=u'Категорія', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='article', blank=True,null=True, verbose_name=u'Категорія', on_delete=models.CASCADE) 
     objects = models.Manager()
  
     class Meta:

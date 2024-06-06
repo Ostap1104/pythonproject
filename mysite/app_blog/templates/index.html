@@ -7,7 +7,7 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             {% for item in categories %}
-                <a href="{{ item.get_absolute_url }}">
+                <a href="{{ item.get_absolute_url }}" class="link-category">
                     <h4>{{ item.category }}</h4>
                 </a>
             {% endfor %}

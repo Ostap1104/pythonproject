@@ -4,10 +4,10 @@
  font-size: 18px;
  }
 }
-/* body {
- background-image: url('../img/bg.jpg');
- background-repeat: repeat-y;
-} */
+body {
+ /* background-color: rgb(228, 228, 228); */
+ background-color: green;
+}
 /* div > h1 {
  color: #fff;
  font-family: 'Ubuntu', sans-serif;
@@ -20,10 +20,16 @@ body > div > nav > div > a > h4 {
  background: #fff;
  color: #383838;
  font-family: 'Ubuntu', sans-serif;
- box-shadow: 2px 2px 1px #ccc;
+ box-shadow: 4px 4px 1px #ccc;
  padding: 10px;
  margin: 10px;
+ border-radius: 15px;
+
 }
+.article-block:hover {
+    filter: brightness(80%);
+    transition: filter 0.3s ease
+  }
 .article-block a {
  color: #383838;
  font-family: 'Ubuntu', sans-serif;
