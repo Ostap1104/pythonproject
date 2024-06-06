@@ -26,15 +26,14 @@ class ArticleDetail(DateDetailView):
     month_format = '%m'
     allow_future = True
 
-def get_context_data(self, *args, **kwargs):
-    context = super(ArticleDetail, 
-        self).get_context_data(*args, **kwargs)
-    try:
-        context['images'] = context['item'].images.all()
-    except:
-        pass
+    def get_context_data(self, *args, **kwargs):
+        context = super(ArticleDetail, self).get_context_data(*args, **kwargs)
+        try:
+            context['images'] = context['item'].images.all()
+        except:
+            pass
 
-    return context
+        return context
 
 class ArticleList(ListView):
     model = Article
@@ -58,9 +57,5 @@ class ArticleCategoryList(ArticleList):
 
     def get_queryset(self, *args, **kwargs):
 
-        articles = Article.objects.filter(
-            category__slug__in=[
-                 self.kwargs['slug']
-            ]).distinct()
-
+        articles = Article.objects.filter(category__slug__in=[ self.kwargs['slug']]).distinct()
         return articles
